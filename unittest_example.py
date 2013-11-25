@@ -9,6 +9,8 @@ def IsOdd(n):
 
 
 # Here's our "unit tests".
+# Eric's notes:
+# unittest.TestCase must be subclassed to be of any use.
 class IsOddTests(unittest.TestCase):
     
     # Eric's notes:
