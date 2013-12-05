@@ -9,6 +9,7 @@ def fizzbuzz():
         else:
             print(i)
 
+
 def fizz_buzz():
     for i in range(1, 101):
         if not (i % 3 == 0 or i % 5 == 0):
