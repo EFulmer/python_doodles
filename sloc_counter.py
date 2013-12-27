@@ -16,3 +16,6 @@ def python_sloc(src, count_whitespace=True):
         lines = f.readlines()
         return sum([1 for l in lines if not re.match(python_comments, l)])
 
+
+# TODO: Ruby (should be the same?), Perl (as Ruby?), C, C++, Java, 
+# OCaml, Haskell, Lisp, Visual Basic
