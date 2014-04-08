@@ -1,0 +1,30 @@
+Exercise 2.1.  If you type an integer with a leading zero, you might get a 
+confusing error:
+
+>>> zipcode = 02492
+                  ^
+SyntaxError: invalid token
+
+Other numbers seem to work, but the results are bizarre:
+>>> zipcode = 02132
+>>> zipcode
+1114
+
+Can you figure out what is going on? Hint: display the values 01, 010, 0100 
+and 01000.
+
+
+Answer: 
+
+>>> 01
+1
+>>> 010
+8
+>>> 0100
+64
+>>> 01000
+512
+
+These are all numbers in base 8! This is why an integer with a leading zero 
+will cause an error when it includes a 9 somewhere in it. 9 is not a valid 
+digit for base 8 numbers.
