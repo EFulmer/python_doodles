@@ -42,22 +42,49 @@ def do_four(f):
 def print_h_border():
     print '+ - - -',
 
-def print_body():
+def print_body_line():
     print '|      ',
 
-def print_grid_1():
+def print_two_h_border():
     do_twice(print_h_border)
     print '+'
-    do_twice(print_body)
-    print '|'
-    do_twice(print_body)
-    print '|'
-    do_twice(print_body)
-    print '|'
-    do_twice(print_body)
+
+def print_two_cell_body_line():
+    do_twice(print_body_line)
     print '|'
 
-print_grid_1()
-print_grid_1()
-do_twice(print_h_border)
-print '+'
+def print_two_cell_bodies():
+    do_four(print_two_cell_body_line)
+
+def print_two_by_two():
+    print_two_h_border()
+    print_two_cell_bodies()
+    print_two_h_border()
+    print_two_cell_bodies()
+    print_two_h_border()
+
+print_two_by_two()
+
+# 2. Write a function that draws a similar grid with four rows and four 
+# columns.
+
+def print_four_h_borders():
+    do_four(print_h_border)
+    print '+'
+
+def print_four_body_lines():
+    do_four(print_body_line)
+    print '|'
+
+def print_four_cell_bodies():
+    do_four(print_four_body_lines)
+
+def print_one_top_cell():
+    print_four_h_borders()
+    print_four_cell_bodies()
+
+def print_four_by_four():
+    do_four(print_one_top_cell)
+    print_four_h_borders()
+
+print_four_by_four()
